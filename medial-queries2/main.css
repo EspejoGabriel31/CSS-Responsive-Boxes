@@ -4,6 +4,7 @@ body {
 
 * {
   border: 1px solid forestgreen;
+  text-align: center;
 }
 
 .container{
@@ -12,66 +13,73 @@ body {
   flex-direction: column;
 }
 
+
+main{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.trio{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
 .a {
   max-width: 100%;
-  padding: 0 10px;
   min-height: 20vh;
   flex-grow: 2;
 }
 
 .b{
-  max-width: 75%;
+  max-width: 100%;
   min-height: 30vh;
-  padding: 0 10px;
-  flex-grow: 3;
+  flex-grow: 2;
+  
 }
 
-.c{
-  height: 50px;
-  width: 50px;
-  padding: 0 10px;
-  flex-grow: 1;
-  max-width: 25%;
-}
-
-.d{
-  height: 50px;
-  width: 50px;
-  padding: 0 10px;
-  flex-grow: 1;
-  max-width: 25%;
-}
-
-.e{
-  height: 50px;
-  width: 50px;
-  padding: 0 10px;
-  flex-grow: 1;
-  max-width: 25%;
+.c, .d, .e{ 
+  min-width: 25vh;
+  min-height: 25vh;
+  
 }
 
 
 .f{
-  min-height: 80vh;
-  min-width: 10%;
-  max-width: 25%;
-  padding: 0 10px;
+  min-height: 20vh;
   flex-grow: 2;
 }
 
-@media (min-width: 800px){
+@media (min-width: 600px){
   .container{
     flex-direction: row;
     flex-wrap: wrap;
   }
   .a{
     width: 100%;
-  }
-  .b{
-    max-width: 90%;
-  }
-  .c, .d, .e{
-    max-width: 33%;
+    max-height: 33vh;
 
   }
+
+  
+  main{
+    max-width: 100%;
+    min-height: 66vh;
+    flex-basis: 75%;
+  }
+
+
+  .c, .d, .e{
+    min-width: 25vh;
+    min-height: 25vh;
+  }
+  .f{
+    max-width: 100%;
+  }
+
+  
+
+  
+  
 }
